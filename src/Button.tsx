@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
-type  ButtonPropsType = {
+type buttonPropsType = {
     score: number
-    addInc:() => void
-    addReset:() => void
+    inc: () => void
+    reset: () => void
 }
 
-export function Button(props: ButtonPropsType) {
-    return <div className='buttons'>
-        <button onClick={props.addInc} disabled={props.score === 5}>+</button>
-        <button onClick={props.addReset} disabled={(props.score === 0)}>reset</button>
+export const Button = (props: buttonPropsType) => {
+    return <div className={'buttons'}>
+        <button onClick={props.inc} disabled={props.score === 5}>inc</button>
+        <button onClick={props.reset} disabled={props.score === 0}>reset</button>
     </div>
 }
-

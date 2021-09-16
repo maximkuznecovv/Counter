@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-type  ScorePropsType = {
+type scorePropsType = {
     score: number
-
 }
 
-export function Score(props: ScorePropsType) {
-    return <div className={props.score === 5 ? 'scoreRed' : 'score'}>{props.score}</div>
+export const Score = (props: scorePropsType) => {
+    return <div className={props.score === 5 ? "scoreRed" : "score"}>{props.score}</div>
 }
-
