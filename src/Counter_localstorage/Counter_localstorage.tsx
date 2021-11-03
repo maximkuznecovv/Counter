@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export function Counter_localstorage() {
 
@@ -11,6 +11,11 @@ export function Counter_localstorage() {
     const setLocalStorageHandler = () => {
         localStorage.setItem("counterValue", JSON.stringify(value))
         localStorage.setItem("counterValue + 1", JSON.stringify(value + 1))
+    }
+
+    const setSessionStorageHandler = () => {
+        // sessionStorage.setItem("Value", JSON.stringify(value))
+        sessionStorage.setItem("Value", value.toString())
     }
 
     const getFromLocalStorageHandler = () => {
@@ -38,6 +43,10 @@ export function Counter_localstorage() {
             <button onClick={getFromLocalStorageHandler}>getFromLocalStorage</button>
             <button onClick={clearLocalStorageHandler}>clearLocalStorage</button>
             <button onClick={removeItemFromLocalStorageHandler}>removeItemFromLocalStorage</button>
+
+            <div>
+                <button onClick={setSessionStorageHandler}>setSessionStorage</button>
+            </div>
         </div>
     );
 }
