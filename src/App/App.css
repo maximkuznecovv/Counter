@@ -1,52 +1,55 @@
-.App {
-    height: 100vh;
+.Counter_1 {
+    /*text-align: center;*/
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://img5.goodfon.ru/wallpaper/nbig/4/e8/tumannost-m16-orel-zvezdy-nebula-m16-eagle-stars.jpg");
+    /*background-color: black;*/
 }
 
 .wrapper {
-    border: 2px solid #fff;
+    border: 2px solid ;
     width: 200px;
     padding: 14px;
     border-radius: 36px;
 }
 
 .score {
+    background-color: #fff;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid ;
     height: 80px;
     padding: 6px;
-    color: white;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     margin: 0 0 14px 0;
     font-size: 60px;
 
 }
 
 .scoreRed {
+    background-color: red;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     height: 80px;
     padding: 6px;
-    color: red;
+    color: #fff;
     font-size: 60px;
     margin: 0 0 14px 0;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
 }
 
 .buttons {
-    border: 2px solid #fff;
+    border: 2px solid;
     padding: 6px;
-    border-radius: 20px ;
+    border-radius: 0 0 20px 20px;
 
 }
 
-button {
-    border-radius: 14px;
+.butC1 {
+    background-color: #fff;
+    border-radius: 0 0 14px 14px;
     width: 90px;
     height: 40px;
     outline: none;
     font-size: 20px;
-} 
+}
