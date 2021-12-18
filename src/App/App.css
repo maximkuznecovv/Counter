@@ -1,55 +1,68 @@
+.app {
+    /*background-color: lightskyblue;*/
+}
+
 .Counter_1 {
-    /*text-align: center;*/
-    height: 30vh;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background-color: black;*/
 }
 
 .wrapper {
-    border: 2px solid ;
-    width: 200px;
-    padding: 14px;
-    border-radius: 36px;
+    border: 1px solid;
+    width: 450px;
+    padding: 14px 80px 14px 80px;
+    border-radius: 100px;
+    background: black;
 }
 
 .score {
-    background-color: #fff;
+    background-color: white;
     text-align: center;
-    border: 2px solid ;
+    border: 1px solid;
     height: 80px;
     padding: 6px;
-    border-radius: 20px 20px 0 0;
-    margin: 0 0 14px 0;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
     font-size: 60px;
-
 }
 
 .scoreRed {
     background-color: red;
     text-align: center;
-    border: 2px solid #000;
-    height: 80px;
+    border: 10px solid ;
+    height: 63px;
     padding: 6px;
-    color: #fff;
+    color: white;
     font-size: 60px;
-    margin: 0 0 14px 0;
-    border-radius: 20px 20px 0 0;
+    margin: 0 0 10px 0;
+    border-radius: 50px;
 }
 
 .buttons {
-    border: 2px solid;
+    background-color: white;
+    border: 1px solid;
     padding: 6px;
-    border-radius: 0 0 20px 20px;
-
+    border-radius: 40px;
 }
 
 .butC1 {
-    background-color: #fff;
-    border-radius: 0 0 14px 14px;
-    width: 90px;
-    height: 40px;
-    outline: none;
+    border-radius: 30px;
+    width: 210px;
+    height: 50px;
     font-size: 20px;
+    color: white;
+    background: black;
+    margin: auto 5px;
+}
+
+input {
+    width: 50px;
+}
+
+.max {
+    color: red;
+    background-color: hotpink;
+    border-color: red;
 }

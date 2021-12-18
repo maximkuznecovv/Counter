@@ -17,7 +17,7 @@ export function UseEffect() {
     },[])
 
     useEffect(()=>{
-        localStorage.setItem("useValue", JSON.stringify(value))
+            localStorage.setItem("useValue", JSON.stringify(value))
     }, [value])
 
     return (
