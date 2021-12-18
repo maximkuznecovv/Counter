@@ -13,7 +13,7 @@ function App() {
             <Counter_1/>
             <hr/>
             <hr/>
-            <div>Counter 2.0 localstorage:</div>
+            <div>COUNTER 2.0 localstorage:</div>
             <Counter_2/>
             <hr/>
             <hr/>
