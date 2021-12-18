@@ -1,0 +1,29 @@
+
+.set_input {
+    margin: 5px;
+    background-color: gray;
+    border: 2px solid white;
+    height: 20px;
+    /*width: 30vh;*/
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    /*font-size: 30px;*/
+    color: white;
+    font-weight: bold;
+    outline: 0;
+}
+
+.error {
+    margin: 5px;
+    background-color: hotpink;
+    border: 2px solid red;
+    height: 20px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    /*font-size: 30px;*/
+    color: red;
+    font-weight: bold;
+    outline: 0;
+}

@@ -5,6 +5,7 @@ import {Counter_1} from "../Counter_1/Counter_1";
 import "./App.css"
 import {Counter_2} from "../Counter_2_localstorage/Counter_2";
 import {Counter_Vlad} from "../Count Else/Counter_Vlad/Counter_Vlad";
+import App_someone from "../Count Else/Counter_someone/App";
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
             <hr/>
             <div>Counter Vlad:</div>
             <Counter_Vlad/>
+            <hr/>
+            <hr/>
+            <div>Counter Someone:</div>
+            <App_someone/>
             <hr/>
             <hr/>
             <div>Counter localstorage:</div>
