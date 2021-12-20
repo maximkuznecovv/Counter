@@ -3,9 +3,10 @@ import {Counter_localstorage} from "../Counter_localstorage/Counter_localstorage
 import {UseEffect} from "../Counter_localstorage_useEffect/useEffect";
 import {Counter_1} from "../Counter_1/Counter_1";
 import "./App.css"
-import {Counter_2} from "../Counter_2_localstorage/Counter_2";
+import {Counter_2} from "../Counter_2.0_localstorage/Counter_2";
 import {Counter_Vlad} from "../Count Else/Counter_Vlad/Counter_Vlad";
 import App_someone from "../Count Else/Counter_someone/App";
+import {Counter_2_1} from "../Counter_2.1_localstorage/Counter_2_1";
 
 function App() {
 
@@ -17,6 +18,10 @@ function App() {
             <hr/>
             <div>COUNTER 2.0 localstorage:</div>
             <Counter_2/>
+            <hr/>
+            <hr/>
+            <div>COUNTER 2.1 localstorage:</div>
+            <Counter_2_1/>
             <hr/>
             <hr/>
             <div>Counter Vlad:</div>

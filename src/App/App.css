@@ -29,8 +29,10 @@
 }
 
 .scoreRed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
-    text-align: center;
     border: 10px solid ;
     height: 63px;
     padding: 6px;
