@@ -1,4 +1,4 @@
-import {counterReducer, CounterType, startMaxActionType} from "./counter-reduser";
+import {counterReducer, CounterType, resetAC, setIncAC, startMaxAC, startMaxActionType} from "./counter-reduser";
 
 test("inc should be increment", () => {
 
@@ -11,7 +11,8 @@ test("inc should be increment", () => {
 
     let newScoreValue = 1
 
-    const endState = counterReducer(startState, {type: "INC", score: newScoreValue})
+    const action = setIncAC(newScoreValue);
+    const endState = counterReducer(startState, action)
 
     expect(endState.score).toBe(newScoreValue);
 });
@@ -27,10 +28,7 @@ test("reset should be reset to start value", () => {
 
     let newStart = 3
 
-    const action = {
-        type: "RESET" as const,
-        start: newStart
-    };
+    const action = resetAC(newStart)
     const endState = counterReducer(startState, action)
 
     expect(endState.start).toBe(newStart);
@@ -45,13 +43,9 @@ test("start/max value should be change", () => {
         error: "",
     }
 
-    const action: startMaxActionType = {
-        type: "SET-START-MAX",
-        error: "Incorrect value!",
-        start: 0
-    };
+    const action = startMaxAC("Incorrect value!", 1)
     const endState = counterReducer(startState, action)
 
     expect(endState.error).toBe("Incorrect value!");
-    expect(endState.start).toBe(0);
+    expect(endState.start).toBe(1);
 });

@@ -54,3 +54,13 @@ export const counterReducer = (state: CounterType = initialState, action: Action
     }
 }
 
+export const setIncAC = (score: number): IncActionType => {
+    return {type: "INC", score}
+}
+export const resetAC = (start: number):ResetActionType => {
+    return {type: "RESET", start}
+}
+export const startMaxAC = (error: ErrorType, start: number): startMaxActionType => {
+    return {type: "SET-START-MAX", error, start}
+}
+
