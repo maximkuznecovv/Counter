@@ -1,5 +1,5 @@
 import React from "react";
-import {ErrorType} from "./Counter_2";
+import {ErrorType} from "./Counter_2.0_reduser";
 import s from "./Counter2.module.css";
 
 type  ScorePropsType = {

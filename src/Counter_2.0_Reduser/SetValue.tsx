@@ -1,5 +1,5 @@
-import React, {ChangeEvent} from "react";
-import {ErrorType} from "./Counter_2";
+import React, {ChangeEvent, useEffect} from "react";
+import {ErrorType} from "./Counter_2.0_reduser";
 import s from "./Counter2.module.css";
 
 export type SetValuePropsType = {
@@ -14,11 +14,13 @@ export type SetValuePropsType = {
 
 export const SetValue = (props: SetValuePropsType) => {
 
-    if (props.start < 0) {
-        props.setError("Incorrect value!")
-    } else if (props.start >= props.max) {
-        props.setError("Incorrect value!")
-    }
+    useEffect(()=>{
+        if (props.start < 0) {
+            props.setError("Incorrect value!")
+        } else if (props.start >= props.max) {
+            props.setError("Incorrect value!")
+        }
+    }, [props.start, props.max])
 
     const setMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         props.setError("enter values and press 'set'")
@@ -27,7 +29,7 @@ export const SetValue = (props: SetValuePropsType) => {
 
     const setMinValue = (e: ChangeEvent<HTMLInputElement>) => {
         props.setError("enter values and press 'set'")
-        return props.setStart(Number(e.currentTarget.value))
+        return props.setStart( Number(e.currentTarget.value))
     }
 
     const errorInput = `${s.input} ${props.error === "Incorrect value!" ? s.max : ""}`

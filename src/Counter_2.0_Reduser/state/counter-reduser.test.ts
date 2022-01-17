@@ -21,7 +21,7 @@ test("reset should be reset to start value", () => {
 
     const startState: CounterType = {
         score: 0,
-        start: 0,
+        start: 3,
         max: 4,
         error: "",
     }
@@ -43,9 +43,9 @@ test("start/max value should be change", () => {
         error: "",
     }
 
-    const action = startMaxAC("Incorrect value!", 1)
+    const action = startMaxAC( 1)
     const endState = counterReducer(startState, action)
 
-    expect(endState.error).toBe("Incorrect value!");
+    expect(endState.error).toBe("");
     expect(endState.start).toBe(1);
 });
