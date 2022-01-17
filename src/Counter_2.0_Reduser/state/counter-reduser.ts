@@ -22,6 +22,10 @@ export type ResetActionType = {
     type: "RESET"
     start: number
 }
+export type SetStartValueActionType = {
+    type: "SET-START-VALUE"
+    start: number
+}
 export type ErrorActionType = {
     type: "ERROR"
     error: ErrorType
@@ -30,14 +34,14 @@ export type MaxActionType = {
     type: "MAX"
     max: number
 }
-
 export type startMaxActionType = {
     type: "SET-START-MAX"
     // error: ErrorType
     start: number
 }
 
-type ActionsType = IncActionType | ResetActionType | MaxActionType | ErrorActionType | startMaxActionType
+type ActionsType = IncActionType | ResetActionType | MaxActionType | ErrorActionType | startMaxActionType |
+    SetStartValueActionType
 
 export const counterReducer = (state: CounterType = initialState, action: ActionsType): CounterType => {
     switch (action.type) {
@@ -50,6 +54,11 @@ export const counterReducer = (state: CounterType = initialState, action: Action
             return {
                 ...state,
                 score: action.start,
+            }
+        case "SET-START-VALUE":
+            return {
+                ...state,
+                start: action.start,
             }
         case "MAX":
             return {
@@ -78,6 +87,9 @@ export const setIncAC = (score: number): IncActionType => {
 }
 export const resetAC = (start: number): ResetActionType => {
     return {type: "RESET", start}
+}
+export const setStarValuetAC = (start: number): SetStartValueActionType => {
+    return {type: "SET-START-VALUE", start}
 }
 export const maxAC = (max: number): MaxActionType => {
     return {type: "MAX", max}

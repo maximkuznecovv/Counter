@@ -1,10 +1,10 @@
-import React, {useEffect, useReducer, useState} from "react";
+import React, {useEffect, useReducer} from "react";
 import {Button2} from "./Button";
 import {Score2} from "./Score";
 import {SetValue} from "./SetValue";
 import {SetB} from "./SetB";
 import s from "./Counter2.module.css";
-import {counterReducer, errorAC, maxAC, resetAC, setIncAC, startMaxAC} from "./state/counter-reduser";
+import {counterReducer, errorAC, maxAC, resetAC, setIncAC, setStarValuetAC, startMaxAC} from "./state/counter-reduser";
 
 export type ErrorType = "enter values and press 'set'" | "Incorrect value!" | ""
 
@@ -41,45 +41,45 @@ export function Counter_2_reduser() {
         dispatchToCounter(startMaxAC( start))
     }
 
-    // useEffect(() => {
-    //     let valueAsString = localStorage.getItem("useScoreReduser")
-    //     if (valueAsString) {
-    //         dispatchToCounter(JSON.parse(valueAsString))
-    //     }
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem("useScoreReduser", JSON.stringify(counter.score))
-    // }, [counter.score])
-    //
-    // useEffect(() => {
-    //     let valueAsString = localStorage.getItem("useStartReduser")
-    //     if (valueAsString) {
-    //         dispatchToCounter(JSON.parse(valueAsString))
-    //     }
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem("useStartReduser", JSON.stringify(counter.start))
-    // }, [counter.start])
-    //
-    // useEffect(() => {
-    //     let valueAsString = localStorage.getItem("useMaxReduser")
-    //     if (valueAsString) {
-    //         dispatchToCounter(JSON.parse(valueAsString))
-    //     }
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem("useMaxReduser", JSON.stringify(counter.max))
-    // }, [counter.max])
+    useEffect(() => {
+        let valueAsString = localStorage.getItem("useScoreReduser")
+        if (valueAsString) {
+            dispatchToCounter(resetAC(JSON.parse(valueAsString)))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem("useScoreReduser", JSON.stringify(counter.score))
+    }, [counter.score])
 
-    // useEffect(() => {
-    //     let valueAsString = localStorage.getItem("errorReduser")
-    //     if (valueAsString) {
-    //         dispatchToCounter(JSON.parse(valueAsString))
-    //     }
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem("errorReduser", JSON.stringify(counter.error))
-    // }, [counter.error])
+    useEffect(() => {
+        let valueAsString = localStorage.getItem("useStartReduser")
+        if (valueAsString) {
+            dispatchToCounter(setStarValuetAC(JSON.parse(valueAsString)))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem("useStartReduser", JSON.stringify(counter.start))
+    }, [counter.start])
+
+    useEffect(() => {
+        let valueAsString = localStorage.getItem("useMaxReduser")
+        if (valueAsString) {
+            dispatchToCounter(maxAC(JSON.parse(valueAsString)))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem("useMaxReduser", JSON.stringify(counter.max))
+    }, [counter.max])
+
+    useEffect(() => {
+        let valueAsString = localStorage.getItem("errorReduser")
+        if (valueAsString) {
+            dispatchToCounter(JSON.parse(valueAsString))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem("errorReduser", JSON.stringify(counter.error))
+    }, [counter.error])
 
     return <div className={s.Counter_2}>
         <div className={s.wrapper}>
