@@ -23,8 +23,6 @@ export function Counter_2_1_redux() {
     const counter_2_1 = useSelector<AppRootStateType, Counter2_1Type>(state => state.counter_2_1)
 
     const onOff = (isOnOff: boolean) => {
-
-        localStorage.setItem("isOnOff_2_1", JSON.stringify(true))
         dispatch(onOffAC(isOnOff))
     }
 
@@ -41,7 +39,6 @@ export function Counter_2_1_redux() {
     }
 
     const setStart = (error: ErrorType, start: number) => {
-        localStorage.setItem("isOnOff_2_1", JSON.stringify(false))
         dispatch(setStartAC("", start))
         dispatch(onOffAC(false))
     }
@@ -49,18 +46,13 @@ export function Counter_2_1_redux() {
 
     useEffect(() => {
         let isOnOff = localStorage.getItem("isOnOff_2_1")
-
-        if (isOnOff === 'true') {
-            dispatch(onOffAC((true)))
-        } else {
-            dispatch(onOffAC((false)))
-
+        if (isOnOff) {
+            dispatch(onOffAC(JSON.parse(isOnOff)))
         }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem("isOnOff_2_1", JSON.stringify(counter_2_1.isOnOff))
     }, [counter_2_1.isOnOff])
-
-    // useEffect(() => {
-    //
-    // }, [counter_2_1.isOnOff])
 
     useEffect(() => {
         let valueAsString = localStorage.getItem("useScoreRedux_2_1")

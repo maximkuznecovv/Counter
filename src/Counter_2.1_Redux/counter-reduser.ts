@@ -17,31 +17,31 @@ const initialState: Counter2_1Type = {
 }
 
 export type IsOnOffActionType = {
-    type: "ONOFF"
+    type: "ONOFF-2-1"
     isOnOff: boolean
 }
 export type IncActionType = {
-    type: "INC"
+    type: "INC-2-1"
 }
 export type ResetActionType = {
-    type: "RESET"
+    type: "RESET-2-1"
     start: number
 }
 export type SetStartValueActionType = {
-    type: "SET-START-VALUE"
+    type: "SET-START-VALUE-2-1"
     start: number
 }
 export type ErrorActionType = {
-    type: "ERROR"
+    type: "ERROR-2-1"
     error: ErrorType
 }
 export type startActionType = {
-    type: "SET-START"
+    type: "SET-START-2-1"
     error: ErrorType
     start: number
 }
 export type setMaxActionType = {
-    type: "SET-MAX"
+    type: "SET-MAX-2-1"
     error: ErrorType
     max: number
 }
@@ -51,39 +51,40 @@ type ActionsType = IncActionType | ResetActionType | ErrorActionType | startActi
 
 export const counterReducer_2_1 = (state: Counter2_1Type = initialState, action: ActionsType): Counter2_1Type => {
     switch (action.type) {
-        case "ONOFF":
+        case "ONOFF-2-1":
             return {
                 ...state,
                 isOnOff: action.isOnOff,
             }
-        case "INC":
+        case "INC-2-1":
             return {
                 ...state,
                 score: state.score + 1,
             }
-        case "RESET":
+        case "RESET-2-1":
             return {
                 ...state,
                 score: action.start,
             }
-        case "SET-START-VALUE":
+        case "SET-START-VALUE-2-1":
             return {
                 ...state,
                 start: action.start,
+
             }
-        case "ERROR":
+        case "ERROR-2-1":
             return {
                 ...state,
                 error: action.error,
             }
-        case "SET-START":
+        case "SET-START-2-1":
             return {
                 ...state,
                 score: action.start,
                 start: action.start,
                 error: action.error,
             }
-        case "SET-MAX":
+        case "SET-MAX-2-1":
             return {
                 ...state,
                 max: action.max,
@@ -95,23 +96,23 @@ export const counterReducer_2_1 = (state: Counter2_1Type = initialState, action:
 }
 
 export const onOffAC = (isOnOff: boolean): IsOnOffActionType => {
-    return {type: "ONOFF", isOnOff}
+    return {type: "ONOFF-2-1", isOnOff}
 }
 export const setIncAC = (): IncActionType => {
-    return {type: "INC"}
+    return {type: "INC-2-1"}
 }
 export const resetAC = (start: number): ResetActionType => {
-    return {type: "RESET", start}
+    return {type: "RESET-2-1", start}
 }
 export const setStarValuetAC = (start: number): SetStartValueActionType => {
-    return {type: "SET-START-VALUE", start}
+    return {type: "SET-START-VALUE-2-1", start}
 }
 export const errorAC = (error: ErrorType): ErrorActionType => {
-    return {type: "ERROR", error}
+    return {type: "ERROR-2-1", error}
 }
 export const setStartAC = (error: ErrorType, start: number): startActionType => {
-    return {type: "SET-START", error, start}
+    return {type: "SET-START-2-1", error, start}
 }
 export const setMaxAC = (error: ErrorType, max: number): setMaxActionType => {
-    return {type: "SET-MAX", error, max}
+    return {type: "SET-MAX-2-1", error, max}
 }

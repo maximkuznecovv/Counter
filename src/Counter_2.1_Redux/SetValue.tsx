@@ -38,23 +38,29 @@ export const SetValue = (props: SetValuePropsType) => {
 
     const errorInput = `${s.input} ${props.error === "Incorrect value!" ? s.max : ""}`
 
+
     return <div className={s.settingScore}>
-        <div>max value:<input
-            value={props.max}
-            className={errorInput}
-            onChange={setMaxValue}
-            type="number"
-            // min="0"
-        />
-        </div>
-        <div>start value:<input
-            value={props.start}
-            className={errorInput}
-            onChange={setMinValue}
-            type="number"
-            // min="0"
-        />
+        <div className={s.mxValue}>
+            <div>
+                <span>max value:</span>
+                <input
+                    value={props.max}
+                    className={errorInput}
+                    onChange={setMaxValue}
+                    type="number"
+                    // min="0"
+                />
+            </div>
+            <div>
+                <span>start value:</span>
+                <input
+                    value={props.start}
+                    className={errorInput}
+                    onChange={setMinValue}
+                    type="number"
+                    // min="0"
+                />
+            </div>
         </div>
     </div>
 }
-

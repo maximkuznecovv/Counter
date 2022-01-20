@@ -16,48 +16,48 @@ function App() {
 
     return (
         <div className='app'>
-            {/*<div>Counter 1:</div>*/}
-            {/*<Counter_1/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>COUNTER 2.0 localstorage:</div>*/}
-            {/*<Counter_2/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>COUNTER 2.0 Reduser:</div>*/}
-            {/*<Counter_2_reduser/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>COUNTER 2.0 Redux:</div>*/}
-            {/*<Counter_2_Redux/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
+            <div>Counter 1:</div>
+            <Counter_1/>
+            <hr/>
+            <hr/>
+            <div>COUNTER 2.0 localstorage:</div>
+            <Counter_2/>
+            <hr/>
+            <hr/>
+            <div>COUNTER 2.0 localstorage Reduser:</div>
+            <Counter_2_reduser/>
+            <hr/>
+            <hr/>
+            <div>COUNTER 2.0 localstorage Redux:</div>
+            <Counter_2_Redux/>
+            <hr/>
+            <hr/>
             <div>COUNTER 2.1 localstorage:</div>
             <Counter_2_1/>
             <hr/>
             <hr/>
-            <div>COUNTER 2.1 Redux:</div>
+            <div>COUNTER 2.1 localstorage Redux:</div>
             <Counter_2_1_redux/>
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>Counter Vlad:</div>*/}
-            {/*<Counter_Vlad/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>Counter Vlad Redux:</div>*/}
-            {/*<Counter_Vlad_Redux/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>Counter Someone:</div>*/}
-            {/*<App_someone/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>Counter localstorage:</div>*/}
-            {/*<Counter_localstorage/>*/}
-            {/*<hr/>*/}
-            {/*<hr/>*/}
-            {/*<div>Counter localstorage useEffect:</div>*/}
-            {/*<UseEffect/>*/}
+            <hr/>
+            <hr/>
+            <div>Counter Vlad:</div>
+            <Counter_Vlad/>
+            <hr/>
+            <hr/>
+            <div>Counter Vlad Redux:</div>
+            <Counter_Vlad_Redux/>
+            <hr/>
+            <hr/>
+            <div>Counter Someone:</div>
+            <App_someone/>
+            <hr/>
+            <hr/>
+            <div>Counter localstorage:</div>
+            <Counter_localstorage/>
+            <hr/>
+            <hr/>
+            <div>Counter localstorage useEffect:</div>
+            <UseEffect/>
         </div>
     )
 }
