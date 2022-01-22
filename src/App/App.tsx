@@ -9,8 +9,8 @@ import App_someone from "../Count Else/Counter_someone/App";
 import {Counter_2_1} from "../Counter_2.1_localstorage/Counter_2_1";
 import {Counter_2_reduser} from "../Counter_2.0_Reduser/Counter_2.0_reduser";
 import {Counter_2_Redux} from "../Counter_2.0_Redux/Counter_2";
-import {Counter_Vlad_Redux} from "../Count Else/Counter_Vlad_REDUX/App";
 import {Counter_2_1_redux} from "../Counter_2.1_Redux/Counter_2_1_redux";
+import {Counter_Vlad_Redux} from "../Count Else/Counter_Vlad_REDUX_LS/App";
 
 function App() {
 

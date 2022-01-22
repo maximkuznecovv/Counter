@@ -1,0 +1,21 @@
+.error {
+  color: red;
+}
+
+.valueSettingWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input {
+  width: 50px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  outline: none;
+}
+.errorInput {
+  border: 2px solid red;
+  outline: none;
+}

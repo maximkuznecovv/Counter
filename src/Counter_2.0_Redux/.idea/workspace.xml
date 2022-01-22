@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="708d24d9-4067-4a8b-8695-e6fd6c0421f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/App.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/App.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/Counter_Vlad_Redux.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/App.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/Button/Button.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/Button/Button.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/Counter/Counter.module.css" afterDir="false" />
@@ -15,26 +20,55 @@
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/SettingsCounter/CounterSettings.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/SettingsCounter/CounterSettings.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/components/SettingsCounter/CounterSettingsTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/react-app-env.d.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/redux/settings-counter-reducer.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/redux/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/Counter_2.0_reduser.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Counter2.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Score.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SetB.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SetValue.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/counter-reduser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/reportWebVitals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/.idea/Counter_Vlad_REDUX_LS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/App.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Button/Button.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Counter/Counter.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Counter/Counter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Counter/CounterButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Counter/CounterContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/Counter/CounterTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/CounterWrapper.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/CounterWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/SettingsCounter/CounterSettings.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/SettingsCounter/CounterSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/SettingsCounter/CounterSettingsButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/components/SettingsCounter/CounterSettingsContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/redux/counter-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/redux/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/reportWebVitals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Count Else/Counter_Vlad_REDUX_LS/utils/localStorage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/Counter2.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/Counter_2_1_redux.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/Score.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/SetB.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/SetValue.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/counter-reduser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Counter_2.1_Redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/Counter_2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Counter_2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/Score.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/Score.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/SetB.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/SetB.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/SetValue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/SetValue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Counter_2.0_Reduser/state/counter-reduser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.0_Reduser/state/counter-reduser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Counter_2.1_localstorage/Counter_2_1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Counter_2.1_localstorage/Counter_2_1.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +101,11 @@
       <option name="presentableId" value="Default" />
       <updated>1642259327869</updated>
       <workItem from="1642259329928" duration="9000" />
+      <workItem from="1642453769821" duration="7399000" />
+      <workItem from="1642464011526" duration="61000" />
+      <workItem from="1642538335297" duration="985000" />
+      <workItem from="1642542985426" duration="2782000" />
+      <workItem from="1642598749784" duration="591000" />
     </task>
     <servers />
   </component>

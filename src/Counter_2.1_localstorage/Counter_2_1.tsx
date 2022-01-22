@@ -76,7 +76,7 @@ export function Counter_2_1() {
 
     return <div className={s.Counter_2}>
         {isOnOff
-            ? (<div className={s.wrapper}>
+            ? <div className={s.wrapper}>
                 <SetValue
                     setStart={setStart}
                     max={max}
@@ -90,8 +90,8 @@ export function Counter_2_1() {
                     start={start}
                     max={max}
                     error={error}/>
-            </div>)
-            : (<div className={s.wrapper}>
+            </div>
+            : <div className={s.wrapper}>
                 <Score2
                     score={score}
                     start={start}
@@ -106,7 +106,7 @@ export function Counter_2_1() {
                     start={start}
                     error={error}
                     onOff={onOff}/>
-            </div>)
+            </div>
         }
     </div>
 }
