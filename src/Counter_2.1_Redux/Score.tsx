@@ -4,23 +4,26 @@ import {ErrorType} from "./counter-reduser";
 
 type  ScorePropsType = {
     score: number
-    start: number
     max: number
-    setError: (value: ErrorType) => void
     error: ErrorType
 }
 
-export function Score(props: ScorePropsType) {
+export const Score: React.FC<ScorePropsType> = React.memo((props) => {
+    const {
+        score,
+        max,
+        error,
+    } = props
 
-    const errorStyle = props.error === "Incorrect value!" ? s.error : ""
-    const colorCount = props.score >= props.max ? s.error : ""
+    const errorStyle = error === "Incorrect value!" ? s.error : ""
+    const colorCount = score >= max ? s.error : ""
 
     return <div className={s.score}>
         {
-            props.error
-                ? <p className={errorStyle}>{props.error}</p>
-                : <h1 className={colorCount}>{props.score}</h1>
+            error
+                ? <p className={errorStyle}>{error}</p>
+                : <h1 className={colorCount}>{score}</h1>
         }
     </div>
-}
+})
 

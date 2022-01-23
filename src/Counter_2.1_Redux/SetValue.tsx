@@ -1,42 +1,47 @@
-import React, {ChangeEvent, useEffect} from "react";
+import React, {ChangeEvent, useCallback, useEffect} from "react";
 import s from "./Counter2.module.css";
 import {useDispatch} from "react-redux";
 import {ErrorType, setMaxAC, setStartAC} from "./counter-reduser";
 
 export type SetValuePropsType = {
     max: number
-    score: number
     start: number
     setError: (value: ErrorType) => void
     error: ErrorType
 }
 
-export const SetValue = (props: SetValuePropsType) => {
+export const SetValue: React.FC<SetValuePropsType> = React.memo((props) => {
+    const{
+        max,
+        start,
+        setError,
+        error,
+    } = props
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (props.start < 0) {
-            props.setError("Incorrect value!")
-        } else if (props.start >= props.max) {
-            props.setError("Incorrect value!")
+        if (start < 0) {
+            setError("Incorrect value!")
+        } else if (start >= max) {
+            setError("Incorrect value!")
         }
-    }, [props.start, props.max])
+    }, [start, max])
 
-    const setMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
+    const setMaxValue = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         // props.setError("enter values and press 'set'")
         // props.setMax(Number(e.currentTarget.value))
         dispatch(setMaxAC("enter values and press 'set'", Number(e.currentTarget.value)))
-    }
+    },[dispatch])
 
-    const setMinValue = (e: ChangeEvent<HTMLInputElement>) => {
+    const setMinValue = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         // props.setError("enter values and press 'set'")
         // // return props.setStart(Number(e.currentTarget.value))
         // return props.setStart(e.currentTarget.valueAsNumber)
         dispatch(setStartAC("enter values and press 'set'", Number(e.currentTarget.value)))
-    }
+    },[dispatch])
 
-    const errorInput = `${s.input} ${props.error === "Incorrect value!" ? s.max : ""}`
+    const errorInput = `${s.input} ${error === "Incorrect value!" ? s.max : ""}`
 
 
     return <div className={s.settingScore}>
@@ -44,7 +49,7 @@ export const SetValue = (props: SetValuePropsType) => {
             <div>
                 <span>max value:</span>
                 <input
-                    value={props.max}
+                    value={max}
                     className={errorInput}
                     onChange={setMaxValue}
                     type="number"
@@ -54,7 +59,7 @@ export const SetValue = (props: SetValuePropsType) => {
             <div>
                 <span>start value:</span>
                 <input
-                    value={props.start}
+                    value={start}
                     className={errorInput}
                     onChange={setMinValue}
                     type="number"
@@ -63,4 +68,4 @@ export const SetValue = (props: SetValuePropsType) => {
             </div>
         </div>
     </div>
-}
+})

@@ -15,33 +15,29 @@ import {
     setStartAC,
     setStarValuetAC
 } from "./counter-reduser";
-import {useEffect} from "react";
+import React, {useCallback, useEffect} from "react";
 
-export function Counter_2_1_redux() {
+export const Counter_2_1_redux: React.FC = React.memo(() => {
 
     const dispatch = useDispatch()
     const counter_2_1 = useSelector<AppRootStateType, Counter2_1Type>(state => state.counter_2_1)
 
-    const onOff = (isOnOff: boolean) => {
+    const onOff = useCallback((isOnOff: boolean) => {
         dispatch(onOffAC(isOnOff))
-    }
-
-    const inc = () => {
+    },[dispatch])
+    const inc = useCallback(() => {
         dispatch(setIncAC())
-    }
-
-    const error = (error: ErrorType) => {
+    },[dispatch])
+    const error = useCallback((error: ErrorType) => {
         dispatch(errorAC(error))
-    }
-
-    const reset = (start: number) => {
+    },[dispatch])
+    const reset = useCallback((start: number) => {
         dispatch(resetAC(start))
-    }
-
-    const setStart = (error: ErrorType, start: number) => {
+    },[dispatch])
+    const setStart = useCallback((error: ErrorType, start: number) => {
         dispatch(setStartAC("", start))
         dispatch(onOffAC(false))
-    }
+    },[dispatch])
 
 
     useEffect(() => {
@@ -89,22 +85,18 @@ export function Counter_2_1_redux() {
             ? <div className={s.wrapper}>
                 <SetValue
                     max={counter_2_1.max}
-                    score={counter_2_1.score}
                     start={counter_2_1.start}
                     setError={error}
                     error={counter_2_1.error}/>
                 <SetB
                     setStart={setStart}
                     start={counter_2_1.start}
-                    max={counter_2_1.max}
                     error={counter_2_1.error}/>
             </div>
             : <div className={s.wrapper}>
                 <Score
                     score={counter_2_1.score}
-                    start={counter_2_1.start}
                     max={counter_2_1.max}
-                    setError={error}
                     error={counter_2_1.error}/>
                 <Button
                     score={counter_2_1.score}
@@ -117,5 +109,5 @@ export function Counter_2_1_redux() {
             </div>
         }
     </div>
-}
+})
 

@@ -1,23 +1,27 @@
-import React from "react";
-import s from './Counter2.module.css';
+import React, {useCallback} from "react";
+import s from "./Counter2.module.css";
 import {ErrorType} from "./counter-reduser";
 
 export type SetBPropsType = {
     setStart: (error: ErrorType, start: number) => void
     start: number
-    max: number
     error: ErrorType
 }
 
-export const SetB = (props: SetBPropsType) => {
+export const SetB: React.FC<SetBPropsType> = React.memo((props) => {
+    const {
+        setStart,
+        start,
+        error,
+    } = props
 
-    const disabledButton = props.error === 'Incorrect value!'
+    const disabledButton = error === "Incorrect value!"
 
-    const setStart = () => {
-        props.setStart(props.error, props.start);
-    }
+    const onSetStart = useCallback(() => {
+        setStart(error, start)
+    }, [])
 
     return <div className={s.buttons}>
-        <button className={s.setBut} onClick={setStart} disabled={disabledButton}>set</button>
+        <button className={s.setBut} onClick={onSetStart} disabled={disabledButton}>set</button>
     </div>
-}
+})

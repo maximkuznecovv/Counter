@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 import {ErrorType} from "./counter-reduser";
 import s from "./Counter2.module.css";
 
@@ -13,28 +13,37 @@ type  ButtonPropsType = {
     onOff: (isOnOff: boolean) => void
 }
 
-export function Button(props: ButtonPropsType) {
+export const Button: React.FC<ButtonPropsType> = React.memo((props) => {
+    const {
+        score,
+        inc,
+        reset,
+        start,
+        max,
+        error,
+        onOff,
+    } = props
 
-    const error1 = props.error === "enter values and press 'set'"
-    const error2 = props.error === "Incorrect value!"
+    const error1 = error === "enter values and press 'set'"
+    const error2 = error === "Incorrect value!"
 
-    const reset = () => {
-        props.reset(props.start)
-    }
-    const onOff = () => {
-        props.onOff(true)
-    }
+    const onReset = useCallback(() => {
+        reset(start)
+    }, [])
+    const setOnOff = useCallback(() => {
+        onOff(true)
+    }, [])
 
     return <div className={s.buttons}>
         <button className={s.butC1}
-                onClick={props.inc}
-                disabled={error1 || error2 || props.score === props.max}>+
+                onClick={inc}
+                disabled={error1 || error2 || score === max}>+
         </button>
         <button className={s.butC1}
-                onClick={reset}
-                disabled={error1 || error2 || props.score === props.start}>reset
+                onClick={onReset}
+                disabled={error1 || error2 || score === start}>reset
         </button>
 
-        <button className={s.butC1} onClick={onOff}>set</button>
+        <button className={s.butC1} onClick={setOnOff}>set</button>
     </div>
-}
+})
